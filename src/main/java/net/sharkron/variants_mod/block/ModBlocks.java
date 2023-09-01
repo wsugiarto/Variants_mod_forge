@@ -14,6 +14,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sharkron.variants_mod.VariantsMod;
+import net.sharkron.variants_mod.block.custom.SoundBlock;
+import net.sharkron.variants_mod.block.custom.TNTMortarBlock;
 import net.sharkron.variants_mod.item.ModItems;
 
 public class ModBlocks {
@@ -31,6 +33,13 @@ public class ModBlocks {
         () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
         .requiresCorrectToolForDrops().strength(3.0F), UniformInt.of(2, 5)));
 
+    
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+        () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).sound(SoundType.AMETHYST_CLUSTER)));
+        
+    public static final RegistryObject<Block> MORTAR_BLOCK = registerBlock("mortar_block",
+        () -> new TNTMortarBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.NETHERITE_BLOCK)));
+        
     // Register the block itself, AND the item associated with it
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
