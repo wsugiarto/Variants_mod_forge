@@ -46,6 +46,10 @@ public class ModCreativeTabs {
                 output.accept(ModItems.AMETHYST_SPELLBOOK.get());
                 output.accept(ModItems.SPORE_STAFF.get());
                 output.accept(ModItems.METAL_DETECTOR.get());
+                
+                output.accept(ModItems.WITHER_CANNON.get());
+                output.accept(ModBlocks.SOUND_BLOCK.get());
+                output.accept(ModBlocks.MORTAR_BLOCK.get());
             }).build());
 
     public static void register(IEventBus eventBus){

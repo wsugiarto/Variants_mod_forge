@@ -18,6 +18,9 @@ public class ModBlockStateProvider extends BlockStateProvider{
         // To register the blocks
         this.blockWithItem(ModBlocks.TOPAZ_BLOCK);
         this.blockWithItem(ModBlocks.TOPAZ_ORE);
+
+        this.blockWithItem(ModBlocks.MORTAR_BLOCK);
+        this.blockWithItem(ModBlocks.SOUND_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

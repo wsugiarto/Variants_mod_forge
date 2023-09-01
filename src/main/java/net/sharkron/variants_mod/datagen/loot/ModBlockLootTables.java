@@ -25,6 +25,8 @@ public class ModBlockLootTables extends BlockLootSubProvider{
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.TOPAZ_BLOCK.get());
+        this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+        this.dropSelf(ModBlocks.MORTAR_BLOCK.get());
 
         this.add(ModBlocks.TOPAZ_ORE.get(), 
             block -> this.createCopperLikeOreDrops(ModBlocks.TOPAZ_ORE.get(), ModItems.TOPAZ.get()));
