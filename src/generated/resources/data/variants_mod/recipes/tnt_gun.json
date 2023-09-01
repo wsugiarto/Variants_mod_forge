@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "S": {
+      "item": "minecraft:tnt"
+    },
+    "T": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GST",
+    "T  "
+  ],
+  "result": {
+    "item": "variants_mod:tnt_gun"
+  },
+  "show_notification": true
+}

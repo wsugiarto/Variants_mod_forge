@@ -1,0 +1,5 @@
+// 1.20.1	2023-08-29T17:55:04.8763443	Tags for minecraft:block mod id variants_mod
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
+7f486c35e1b56e862e9af9938d9867613b02dcba data/minecraft/tags/blocks/mineable/pickaxe.json
+7f486c35e1b56e862e9af9938d9867613b02dcba data/minecraft/tags/blocks/needs_iron_tool.json
+db477ef8dd385ce42fe5b21d94dcd408635a7440 data/variants_mod/tags/blocks/metal_detector_valuables.json

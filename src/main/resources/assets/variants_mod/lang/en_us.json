@@ -1,0 +1,30 @@
+{
+    "item.variants_mod.pondering_orb": "Pondering Orb",
+    "item.variants_mod.tnt_gun": "TNT Gun",
+    "item.variants_mod.bullet": "Blowpipe",
+    "item.variants_mod.blowpipe": "Blowpipe",
+    "item.variants_mod.stone_launcher": "Stone Launcher",
+    "item.variants_mod.handgun": "Handgun",
+    "item.variants_mod.topaz": "Topaz",
+    "item.variants_mod.metal_detector": "Metal Detector",
+    "item.variants_mod.topaz_staff": "Topaz Staff",
+    "item.variants_mod.charcoal_staff": "Charcoal Staff",
+    "item.variants_mod.copper_staff": "Copper Staff",
+    "item.variants_mod.spore_staff": "Spore Staff",
+    "item.variants_mod.torch_tomb": "Torch Tomb",
+    "item.variants_mod.redstone_spellbook": "Redstone Spellbook",
+    "item.variants_mod.diamond_staff": "Diamond Staff",
+    "item.variants_mod.netherite_fork": "Netherite Fork",
+    "item.variants_mod.amethyst_spellbook": "Amethyst Spellbook",
+    "item.variants_mod.wooden_stake": "Wooden Stake",
+    "item.variants_mod.stone_dagger": "Stone Dagger",
+    "item.variants_mod.iron_dagger": "Iron Dagger",
+    "item.variants_mod.gold_dagger": "Gold Dagger",
+    "item.variants_mod.diamond_dagger": "Diamond Dagger",
+    "item.variants_mod.netherite_dagger": "Netherite Dagger",
+
+    "block.variants_mod.topaz_block": "Topaz Block",
+    "block.variants_mod.topaz_ore": "Topaz Ore",
+
+    "creativetab.variants_mod_tab": "Variants"
+  }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond_block"
+    },
+    "B": {
+      "item": "minecraft:ender_pearl"
+    },
+    "S": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "#B ",
+    "BS ",
+    "  S"
+  ],
+  "result": {
+    "item": "variants_mod:diamond_staff"
+  },
+  "show_notification": true
+}

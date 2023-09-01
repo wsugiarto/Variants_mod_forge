@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "S": {
+      "item": "minecraft:redstone_block"
+    },
+    "T": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "TST",
+    "TBT",
+    "T#T"
+  ],
+  "result": {
+    "item": "variants_mod:redstone_spellbook"
+  },
+  "show_notification": true
+}

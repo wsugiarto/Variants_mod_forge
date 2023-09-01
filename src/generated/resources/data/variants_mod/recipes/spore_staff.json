@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:spore_blossom"
+    },
+    "B": {
+      "item": "minecraft:moss_block"
+    },
+    "S": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "pattern": [
+    "#B ",
+    "BS ",
+    "  S"
+  ],
+  "result": {
+    "item": "variants_mod:spore_staff"
+  },
+  "show_notification": true
+}

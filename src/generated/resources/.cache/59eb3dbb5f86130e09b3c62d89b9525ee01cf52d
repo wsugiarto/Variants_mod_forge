@@ -1,0 +1,5 @@
+// 1.20.1	2023-09-01T19:26:43.7374897	Loot Tables
+bd80be5b7a4a33769628acf37f1a7b8ec5f73c5e data/variants_mod/loot_tables/blocks/mortar_block.json
+cc6f8d475dd3eacad419e3a09377f0364e336635 data/variants_mod/loot_tables/blocks/sound_block.json
+0c08463f068a37a4d0d2f12d16a8f6170dacc52e data/variants_mod/loot_tables/blocks/topaz_block.json
+e182ef60a171e62d078c8ae90cecd065e48aee0a data/variants_mod/loot_tables/blocks/topaz_ore.json

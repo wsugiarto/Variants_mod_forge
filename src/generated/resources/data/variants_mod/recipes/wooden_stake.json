@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SIS",
+    "   "
+  ],
+  "result": {
+    "item": "variants_mod:wooden_stake"
+  },
+  "show_notification": true
+}

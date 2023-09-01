@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:coal_block"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "S": {
+      "item": "minecraft:torch"
+    },
+    "T": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "TST",
+    "TBT",
+    "T#T"
+  ],
+  "result": {
+    "item": "variants_mod:torch_tomb"
+  },
+  "show_notification": true
+}

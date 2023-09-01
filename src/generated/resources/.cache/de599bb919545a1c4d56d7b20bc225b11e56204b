@@ -1,0 +1,13 @@
+// 1.20.1	2023-09-01T19:26:43.7414905	Block States: variants_mod
+e5364633f7718c3b433aa9f834ee6fff1c433f7f assets/variants_mod/blockstates/mortar_block.json
+df81c1f88e96ab4968189333311c8acdece0ef3f assets/variants_mod/blockstates/sound_block.json
+78af26ddeefe6fa375d49a572bb94ec74ccecfe0 assets/variants_mod/blockstates/topaz_block.json
+ee309212dd384d2fb6842439ddb6ede7a9b0c391 assets/variants_mod/blockstates/topaz_ore.json
+b90a7086c69e69ce7c069e2bb32d192baa2d2249 assets/variants_mod/models/block/mortar_block.json
+49f82210d98893c0221b5cfa9cb3d12abab801eb assets/variants_mod/models/block/sound_block.json
+d49b5017ee966b1425c3be71d912d3b12bbb144d assets/variants_mod/models/block/topaz_block.json
+8cfcda4a7b39b647584ce2bdc3f6847098cf3764 assets/variants_mod/models/block/topaz_ore.json
+6ea2a404d937bc8a9a747d3b2adfadc3050b3a0a assets/variants_mod/models/item/mortar_block.json
+5864f3168994cdcd4d0eb50468b7903f09c85b8d assets/variants_mod/models/item/sound_block.json
+b33147ad6a6dae130fda0ef70fa26bfdb79eff43 assets/variants_mod/models/item/topaz_block.json
+1e477a95e49ce31b26785cb5b83f31b400b7705b assets/variants_mod/models/item/topaz_ore.json

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SIS",
+    "   "
+  ],
+  "result": {
+    "item": "variants_mod:iron_dagger"
+  },
+  "show_notification": true
+}

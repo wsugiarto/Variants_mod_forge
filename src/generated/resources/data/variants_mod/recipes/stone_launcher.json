@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "S": {
+      "item": "minecraft:furnace"
+    },
+    "T": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GST",
+    "T  "
+  ],
+  "result": {
+    "item": "variants_mod:stone_launcher"
+  },
+  "show_notification": true
+}

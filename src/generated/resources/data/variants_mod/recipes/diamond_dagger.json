@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SIS",
+    "   "
+  ],
+  "result": {
+    "item": "variants_mod:diamond_dagger"
+  },
+  "show_notification": true
+}

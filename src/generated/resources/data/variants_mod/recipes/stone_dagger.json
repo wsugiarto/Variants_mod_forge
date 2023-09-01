@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SIS",
+    "   "
+  ],
+  "result": {
+    "item": "variants_mod:stone_dagger"
+  },
+  "show_notification": true
+}

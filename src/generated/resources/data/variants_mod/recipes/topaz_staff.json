@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "variants_mod:topaz_block"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    },
+    "S": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "#B ",
+    "BS ",
+    "  S"
+  ],
+  "result": {
+    "item": "variants_mod:topaz_staff"
+  },
+  "show_notification": true
+}
