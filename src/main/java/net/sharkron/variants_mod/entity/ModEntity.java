@@ -19,6 +19,7 @@ import net.sharkron.variants_mod.entity.custom.SporeStaffBolt;
 import net.sharkron.variants_mod.entity.custom.StoneLauncherProjectile;
 import net.sharkron.variants_mod.entity.custom.TopazStaffBolt;
 import net.sharkron.variants_mod.entity.custom.TorchTombProjectile;
+import net.sharkron.variants_mod.entity.custom.VexxProjectile;
 
 public class ModEntity {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, VariantsMod.MODID);
@@ -58,6 +59,9 @@ public class ModEntity {
     
     public static final RegistryObject<EntityType<GenericBullet>> GENERIC_BULLET = ENTITY_TYPES.register("generic_bullet",
             () -> EntityType.Builder.of((EntityType.EntityFactory<GenericBullet>) GenericBullet::new, MobCategory.MISC).sized(0.5F, 0.5F).build("generic_bullet"));
+
+    public static final RegistryObject<EntityType<VexxProjectile>> VEXX_PROJECTILE = ENTITY_TYPES.register("vexx_projectile", 
+            () -> EntityType.Builder.of((EntityType.EntityFactory<VexxProjectile>) VexxProjectile::new, MobCategory.MISC).sized(0.5F,0.5F).build("vexx_projectile"));     
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);

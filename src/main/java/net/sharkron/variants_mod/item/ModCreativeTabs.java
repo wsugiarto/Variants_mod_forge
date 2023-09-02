@@ -50,6 +50,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.WITHER_CANNON.get());
                 output.accept(ModBlocks.SOUND_BLOCK.get());
                 output.accept(ModBlocks.MORTAR_BLOCK.get());
+                output.accept(ModItems.VEXX_STAFF.get());
             }).build());
 
     public static void register(IEventBus eventBus){

@@ -20,6 +20,7 @@ import net.sharkron.variants_mod.item.custom.StoneLauncher;
 import net.sharkron.variants_mod.item.custom.TNTGun;
 import net.sharkron.variants_mod.item.custom.TopazStaff;
 import net.sharkron.variants_mod.item.custom.TorchTomb;
+import net.sharkron.variants_mod.item.custom.VexxStaff;
 import net.sharkron.variants_mod.item.custom.WitherCannon;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -102,6 +103,9 @@ public class ModItems {
     //WILSON
     public static final RegistryObject<Item> WITHER_CANNON = ITEMS.register("wither_cannon",
         () -> new WitherCannon(new Item.Properties().durability(64)));
+
+    public static final RegistryObject<Item> VEXX_STAFF = ITEMS.register("vexx_staff",
+        () -> new VexxStaff(new Item.Properties().durability(64)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
