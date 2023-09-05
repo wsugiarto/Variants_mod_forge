@@ -8,10 +8,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sharkron.variants_mod.VariantsMod;
 import net.sharkron.variants_mod.entity.custom.AmethystShardBolt;
+import net.sharkron.variants_mod.entity.custom.BouncingHead;
 import net.sharkron.variants_mod.entity.custom.CharcoalStaffBolt;
 import net.sharkron.variants_mod.entity.custom.CopperStaffBolt;
 import net.sharkron.variants_mod.entity.custom.DiamondStaffBolt;
 import net.sharkron.variants_mod.entity.custom.GenericBullet;
+import net.sharkron.variants_mod.entity.custom.Grenade;
 import net.sharkron.variants_mod.entity.custom.MiniDiamondBolt;
 import net.sharkron.variants_mod.entity.custom.NetheriteForkProjectile;
 import net.sharkron.variants_mod.entity.custom.RedstoneSpellbookProjectile;
@@ -21,6 +23,7 @@ import net.sharkron.variants_mod.entity.custom.StoneLauncherProjectile;
 import net.sharkron.variants_mod.entity.custom.TopazSpellbookMainBolt;
 import net.sharkron.variants_mod.entity.custom.TopazStaffBolt;
 import net.sharkron.variants_mod.entity.custom.TorchTombProjectile;
+import net.sharkron.variants_mod.entity.custom.VexxProjectile;
 
 public class ModEntity {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, VariantsMod.MODID);
@@ -67,6 +70,15 @@ public class ModEntity {
     public static final RegistryObject<EntityType<MiniDiamondBolt>> MINI_DIAMOND_BOLT = ENTITY_TYPES.register("mini_diamond_bolt",
             () -> EntityType.Builder.of((EntityType.EntityFactory<MiniDiamondBolt>) MiniDiamondBolt::new, MobCategory.MISC).sized(0.5F, 0.5F).build("mini_diamond_bolt"));
 
+    public static final RegistryObject<EntityType<VexxProjectile>> VEXX_PROJECTILE = ENTITY_TYPES.register("vexx_projectile", 
+            () -> EntityType.Builder.of((EntityType.EntityFactory<VexxProjectile>) VexxProjectile::new, MobCategory.MISC).sized(0.5F,0.5F).build("vexx_projectile")); 
+
+    public static final RegistryObject<EntityType<BouncingHead>> BOUNCING_HEAD = ENTITY_TYPES.register("bouncing_head", 
+            () -> EntityType.Builder.of((EntityType.EntityFactory<BouncingHead>) BouncingHead::new, MobCategory.MISC).sized(0.5F,0.5F).build("bouncing_head"));
+
+    public static final RegistryObject<EntityType<Grenade>> GRENADE = ENTITY_TYPES.register("grenade", 
+            () -> EntityType.Builder.of((EntityType.EntityFactory<Grenade>) Grenade::new, MobCategory.MISC).sized(0.5F,0.5F).build("grenade"));
+            
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
     }

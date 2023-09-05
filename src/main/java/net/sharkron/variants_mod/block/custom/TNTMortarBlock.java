@@ -23,7 +23,7 @@ public class TNTMortarBlock extends Block {
 
         PrimedTnt bomb = new PrimedTnt(pLevel, pPos.getX(), pPos.getY() + 2, pPlayer.getZ(), pPlayer);
         bomb.setDeltaMovement(look.x * speed, look.y * speed + 2, look.z * speed);
-        bomb.setFuse(50);
+        bomb.setFuse(100);
         pLevel.addFreshEntity(bomb);
 
       return InteractionResult.SUCCESS;

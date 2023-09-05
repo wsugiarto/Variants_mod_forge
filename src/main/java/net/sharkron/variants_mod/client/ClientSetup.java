@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.sharkron.variants_mod.VariantsMod;
 import net.sharkron.variants_mod.client.renderer.AmethystShardBoltRenderer;
+import net.sharkron.variants_mod.client.renderer.BouncingHeadRenderer;
 import net.sharkron.variants_mod.client.renderer.CharcoalStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.CopperStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.DiamondStaffBoltRenderer;
@@ -20,6 +21,7 @@ import net.sharkron.variants_mod.client.renderer.StoneLauncherProjectileRenderer
 import net.sharkron.variants_mod.client.renderer.TopazSpellbookBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.TopazStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.TorchTombProjectileRenderer;
+import net.sharkron.variants_mod.client.renderer.VexxProjectileRenderer;
 import net.sharkron.variants_mod.entity.ModEntity;
 
 @Mod.EventBusSubscriber(modid = VariantsMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -40,5 +42,7 @@ public class ClientSetup {
         EntityRenderers.register(ModEntity.GENERIC_BULLET.get(), GenericBulletRenderer::new);
         EntityRenderers.register(ModEntity.TOPAZ_SPELLBOOK_MAIN_BOLT.get(), TopazSpellbookBoltRenderer::new);
         EntityRenderers.register(ModEntity.MINI_DIAMOND_BOLT.get(), MiniDiamondBoltRenderer::new);
+        EntityRenderers.register(ModEntity.VEXX_PROJECTILE.get(), VexxProjectileRenderer::new);
+        EntityRenderers.register(ModEntity.BOUNCING_HEAD.get(), BouncingHeadRenderer::new);
     }
 }

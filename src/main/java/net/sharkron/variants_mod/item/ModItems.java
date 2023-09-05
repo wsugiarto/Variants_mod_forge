@@ -8,11 +8,14 @@ import net.sharkron.variants_mod.VariantsMod;
 import net.sharkron.variants_mod.item.custom.AmethystRifle;
 import net.sharkron.variants_mod.item.custom.AmethystSpellbook;
 import net.sharkron.variants_mod.item.custom.Blowpipe;
+import net.sharkron.variants_mod.item.custom.BounceCannon;
 import net.sharkron.variants_mod.item.custom.CharcoalStaff;
 import net.sharkron.variants_mod.item.custom.CopperStaff;
 import net.sharkron.variants_mod.item.custom.DiamondRifle;
 import net.sharkron.variants_mod.item.custom.DiamondSniper;
 import net.sharkron.variants_mod.item.custom.DiamondStaff;
+import net.sharkron.variants_mod.item.custom.GambleItem;
+import net.sharkron.variants_mod.item.custom.GrenadeItem;
 import net.sharkron.variants_mod.item.custom.Handgun;
 import net.sharkron.variants_mod.item.custom.MetalDetectorItem;
 import net.sharkron.variants_mod.item.custom.NetheriteFork;
@@ -25,6 +28,7 @@ import net.sharkron.variants_mod.item.custom.TopazHandgun;
 import net.sharkron.variants_mod.item.custom.TopazSpellbook;
 import net.sharkron.variants_mod.item.custom.TopazStaff;
 import net.sharkron.variants_mod.item.custom.TorchTomb;
+import net.sharkron.variants_mod.item.custom.VexxStaff;
 import net.sharkron.variants_mod.item.custom.WitherCannon;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -122,6 +126,17 @@ public class ModItems {
     //WILSON
     public static final RegistryObject<Item> WITHER_CANNON = ITEMS.register("wither_cannon",
         () -> new WitherCannon(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> VEXX_STAFF = ITEMS.register("vexx_staff",
+        () -> new VexxStaff(new Item.Properties().durability(64)));
+    
+    public static final RegistryObject<Item> BOUNCE_CANNON = ITEMS.register("bounce_cannon",
+        () -> new BounceCannon(new Item.Properties().durability(64)));
+
+    public static final RegistryObject<Item> GRENADE_ITEM = ITEMS.register("grenade_item",
+        () -> new GrenadeItem(new Item.Properties()));
+    
+    public static final RegistryObject<Item> GAMBLE_ITEM = ITEMS.register("gamble_item",
+        () -> new GambleItem(new Item.Properties().durability(6)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
