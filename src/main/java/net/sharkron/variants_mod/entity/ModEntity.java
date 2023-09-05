@@ -12,11 +12,13 @@ import net.sharkron.variants_mod.entity.custom.CharcoalStaffBolt;
 import net.sharkron.variants_mod.entity.custom.CopperStaffBolt;
 import net.sharkron.variants_mod.entity.custom.DiamondStaffBolt;
 import net.sharkron.variants_mod.entity.custom.GenericBullet;
+import net.sharkron.variants_mod.entity.custom.MiniDiamondBolt;
 import net.sharkron.variants_mod.entity.custom.NetheriteForkProjectile;
 import net.sharkron.variants_mod.entity.custom.RedstoneSpellbookProjectile;
 import net.sharkron.variants_mod.entity.custom.SeedBullet;
 import net.sharkron.variants_mod.entity.custom.SporeStaffBolt;
 import net.sharkron.variants_mod.entity.custom.StoneLauncherProjectile;
+import net.sharkron.variants_mod.entity.custom.TopazSpellbookMainBolt;
 import net.sharkron.variants_mod.entity.custom.TopazStaffBolt;
 import net.sharkron.variants_mod.entity.custom.TorchTombProjectile;
 
@@ -58,6 +60,12 @@ public class ModEntity {
     
     public static final RegistryObject<EntityType<GenericBullet>> GENERIC_BULLET = ENTITY_TYPES.register("generic_bullet",
             () -> EntityType.Builder.of((EntityType.EntityFactory<GenericBullet>) GenericBullet::new, MobCategory.MISC).sized(0.5F, 0.5F).build("generic_bullet"));
+    
+    public static final RegistryObject<EntityType<TopazSpellbookMainBolt>> TOPAZ_SPELLBOOK_MAIN_BOLT = ENTITY_TYPES.register("topaz_spellbook_main_bolt",
+            () -> EntityType.Builder.of((EntityType.EntityFactory<TopazSpellbookMainBolt>) TopazSpellbookMainBolt::new, MobCategory.MISC).sized(0.5F, 0.5F).build("topaz_spellbook_main_bolt"));
+
+    public static final RegistryObject<EntityType<MiniDiamondBolt>> MINI_DIAMOND_BOLT = ENTITY_TYPES.register("mini_diamond_bolt",
+            () -> EntityType.Builder.of((EntityType.EntityFactory<MiniDiamondBolt>) MiniDiamondBolt::new, MobCategory.MISC).sized(0.5F, 0.5F).build("mini_diamond_bolt"));
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);

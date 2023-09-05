@@ -25,6 +25,10 @@ public class ModCreativeTabs {
                 output.accept(ModItems.BLOWPIPE.get()); 
                 output.accept(ModItems.STONE_LAUNCHER.get()); 
                 output.accept(ModItems.HANDGUN.get()); 
+                output.accept(ModItems.TOPAZ_HANDGUN.get()); 
+                output.accept(ModItems.AMETHYST_RIFLE.get()); 
+                output.accept(ModItems.DIAMOND_RIFLE.get()); 
+                output.accept(ModItems.DIAMOND_SNIPER.get()); 
                 output.accept(ModItems.TNT_GUN.get()); 
                 output.accept(ModBlocks.TOPAZ_BLOCK.get());
                 output.accept(ModBlocks.TOPAZ_ORE.get());
@@ -41,9 +45,11 @@ public class ModCreativeTabs {
                 output.accept(ModItems.COPPER_STAFF.get());
                 output.accept(ModItems.REDSTONE_SPELLBOOK.get());
                 output.accept(ModItems.TOPAZ_STAFF.get());
+                output.accept(ModItems.TOPAZ_SPELLBOOK.get());
                 output.accept(ModItems.DIAMOND_STAFF.get());
                 output.accept(ModItems.NETHERITE_FORK.get());
                 output.accept(ModItems.AMETHYST_SPELLBOOK.get());
+                output.accept(ModItems.TOPAZ_SPELLBOOK.get());
                 output.accept(ModItems.SPORE_STAFF.get());
                 output.accept(ModItems.METAL_DETECTOR.get());
                 

@@ -2,6 +2,7 @@ package net.sharkron.variants_mod.entity.custom;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
@@ -14,10 +15,13 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.entity.player.Player;
 
 public class DiamondStaffBolt extends AbstractStaffBolt{
     private int life;
-    private int pierces;
+    private Player player;
 
     public DiamondStaffBolt(EntityType<? extends DiamondStaffBolt> p, Level level){
         super(p, level);
@@ -28,7 +32,12 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
         this(ModEntity.DIAMOND_BOLT.get(), level);
         this.setOwner(owner);
         this.setPos(owner.getX(), owner.getY() + owner.getEyeHeight(), owner.getZ());
-        this.shoot(x, y, z, 0.5f, 0.0F);
+        this.shoot(x, y, z, 1.5f, 0.0F);
+
+        
+        if(owner instanceof Player){
+            this.player = (Player)owner;
+        }
         
     }
 
@@ -49,9 +58,6 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
         } else { // in air
             this.setDeltaMovement(vec3.scale((double)1.0F)); // this changes friction
             this.tickDespawn();
-            // if (!this.isNoGravity()) { // if gravity
-            //     this.setDeltaMovement(this.getDeltaMovement().add(0.0D, (double)0, 0.0D));
-            // }
         }
     }
 
@@ -62,9 +68,22 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
         Entity entity = this.getOwner();
         if (entity instanceof LivingEntity livingentity) {
             hit.getEntity().hurt(this.damageSources().mobProjectile(this, livingentity), damage);
-            this.pierces++;
-        }
-        if(this.pierces >= 10){
+            
+            MiniDiamondBolt proj1 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            proj1.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
+            proj1.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
+
+            MiniDiamondBolt proj2 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            proj2.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
+            proj2.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
+
+            MiniDiamondBolt proj3 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            proj3.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
+            proj3.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
+
+            this.level().addFreshEntity(proj1);
+            this.level().addFreshEntity(proj2);
+            this.level().addFreshEntity(proj3);
             this.discard();
         }
 
@@ -73,6 +92,24 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
     protected void onHitBlock(BlockHitResult hit) {
         super.onHitBlock(hit); // apparently this is just so the block knows it got hit
         if (!this.level().isClientSide) {
+            
+            MiniDiamondBolt proj1 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            proj1.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
+            proj1.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
+
+            MiniDiamondBolt proj2 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            proj2.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
+            proj2.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
+
+            MiniDiamondBolt proj3 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            proj3.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
+            proj3.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
+
+            this.level().addFreshEntity(proj1);
+            this.level().addFreshEntity(proj2);
+            this.level().addFreshEntity(proj3);
+
+            this.discard();
         }
 
     }
@@ -84,6 +121,17 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
             this.discard();
         }
 
+    }
+
+    protected Entity getNearestHostile(){
+        AABB aabb = this.getBoundingBox().inflate(8.0D); // 8 blocks within the main bullet
+        TargetingConditions targetConditions = TargetingConditions.forCombat().range(64).selector(Entity::isAlive);
+
+        // return this.level().getNearestEntities(null, getBoundingBox(), Entity::isAlive);
+
+        return this.level().getNearestEntity(this.level().getEntitiesOfClass(Mob.class, aabb, (p_148152_) -> {
+            return true;
+         }), targetConditions, this.player, this.getX(), this.getY(), this.getZ());
     }
 
     protected ParticleOptions getTrailParticle() {

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "S": {
+      "item": "minecraft:diamond_block"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GST",
+    "T  "
+  ],
+  "result": {
+    "item": "variants_mod:diamond_sniper"
+  },
+  "show_notification": true
+}

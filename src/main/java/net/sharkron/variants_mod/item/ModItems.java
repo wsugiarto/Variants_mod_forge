@@ -5,10 +5,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sharkron.variants_mod.VariantsMod;
+import net.sharkron.variants_mod.item.custom.AmethystRifle;
 import net.sharkron.variants_mod.item.custom.AmethystSpellbook;
 import net.sharkron.variants_mod.item.custom.Blowpipe;
 import net.sharkron.variants_mod.item.custom.CharcoalStaff;
 import net.sharkron.variants_mod.item.custom.CopperStaff;
+import net.sharkron.variants_mod.item.custom.DiamondRifle;
+import net.sharkron.variants_mod.item.custom.DiamondSniper;
 import net.sharkron.variants_mod.item.custom.DiamondStaff;
 import net.sharkron.variants_mod.item.custom.Handgun;
 import net.sharkron.variants_mod.item.custom.MetalDetectorItem;
@@ -18,6 +21,8 @@ import net.sharkron.variants_mod.item.custom.RedstoneSpellbook;
 import net.sharkron.variants_mod.item.custom.SporeStaff;
 import net.sharkron.variants_mod.item.custom.StoneLauncher;
 import net.sharkron.variants_mod.item.custom.TNTGun;
+import net.sharkron.variants_mod.item.custom.TopazHandgun;
+import net.sharkron.variants_mod.item.custom.TopazSpellbook;
 import net.sharkron.variants_mod.item.custom.TopazStaff;
 import net.sharkron.variants_mod.item.custom.TorchTomb;
 import net.sharkron.variants_mod.item.custom.WitherCannon;
@@ -77,6 +82,9 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST_SPELLBOOK = ITEMS.register("amethyst_spellbook",
         () -> new AmethystSpellbook(new Item.Properties().durability(100)));
 
+    public static final RegistryObject<Item> TOPAZ_SPELLBOOK = ITEMS.register("topaz_spellbook",
+        () -> new TopazSpellbook(new Item.Properties().durability(100)));
+
     public static final RegistryObject<Item> DIAMOND_STAFF = ITEMS.register("diamond_staff",
         () -> new DiamondStaff(new Item.Properties().durability(100)));
 
@@ -95,6 +103,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> HANDGUN = ITEMS.register("handgun",
         () -> new Handgun(new Item.Properties().durability(250)));
+
+    public static final RegistryObject<Item> TOPAZ_HANDGUN = ITEMS.register("topaz_handgun",
+        () -> new TopazHandgun(new Item.Properties().durability(501)));
+
+    public static final RegistryObject<Item> AMETHYST_RIFLE = ITEMS.register("amethyst_rifle",
+        () -> new AmethystRifle(new Item.Properties().durability(501)));
+
+    public static final RegistryObject<Item> DIAMOND_RIFLE = ITEMS.register("diamond_rifle",
+        () -> new DiamondRifle(new Item.Properties().durability(1561)));
+
+    public static final RegistryObject<Item> DIAMOND_SNIPER = ITEMS.register("diamond_sniper",
+        () -> new DiamondSniper(new Item.Properties().durability(1561)));
 
     public static final RegistryObject<Item> TNT_GUN = ITEMS.register("tnt_gun",
         () -> new TNTGun(new Item.Properties().durability(2032)));

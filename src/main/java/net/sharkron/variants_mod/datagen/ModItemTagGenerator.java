@@ -32,6 +32,7 @@ public class ModItemTagGenerator extends ItemTagsProvider{
             .add(ModItems.REDSTONE_SPELLBOOK.get())
             .add(ModItems.TOPAZ_STAFF.get())
             .add(ModItems.AMETHYST_SPELLBOOK.get())
+            .add(ModItems.TOPAZ_SPELLBOOK.get())
             .add(ModItems.DIAMOND_STAFF.get())
             .add(ModItems.NETHERITE_FORK.get());
 

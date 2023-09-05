@@ -45,6 +45,7 @@ public class TopazStaff extends Item{
             // DragonFireball proj1 = new DragonFireball(level, player, look.x, look.y, look.z);
 
             TopazStaffBolt proj1 = new TopazStaffBolt(level, player, look.x, look.y, look.z);
+            proj1.shoot(look.x, look.y, look.z, 1.5f, 0.0F);
 
             // proj.setDeltaMovement(0, look.y + 0.5, 0); // Set the initial velocity
             // Apparently doing this on a projectile can make the proj have this speed before changing back to the projectile's initial speed

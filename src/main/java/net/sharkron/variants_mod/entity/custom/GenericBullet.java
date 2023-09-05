@@ -17,20 +17,33 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class GenericBullet extends AbstractStaffBolt{
     private int life;
-    protected float baseDamage = 2.0F;
+    protected float activeDamage;
+    protected float damage0;
+    protected float damage1;
+    protected float damage2;
     ParticleOptions particle = ParticleTypes.CRIT;
+    protected int fallOff1;
+    protected int fallOff2;
+    protected int end;
 
     public GenericBullet(EntityType<? extends GenericBullet> p, Level level){
         super(p, level);
     }
 
     // This should be constructor for non abstract
-    public GenericBullet(Level level, LivingEntity owner, double x, double y, double z, float damage){
+    public GenericBullet(Level level, LivingEntity owner, double x, double y, double z, float damage0, int fallOff1, float damage1, int fallOff2, float damage2, int end){
         this(ModEntity.GENERIC_BULLET.get(), level);
         this.setOwner(owner);
         this.setPos(owner.getX(), owner.getY() + owner.getEyeHeight(), owner.getZ());
         this.shoot(x, y, z, 4.0f, 0.0F);
-        this.baseDamage = this.baseDamage + damage;
+
+        this.fallOff1 = fallOff1;
+        this.fallOff2 = fallOff2;
+        this.end = end;
+        this.damage0 = damage0;
+        this.damage1 = damage1;
+        this.damage2 = damage2;
+        this.activeDamage = this.damage0;
         
     }
 
@@ -62,7 +75,7 @@ public class GenericBullet extends AbstractStaffBolt{
         super.onHitEntity(hit);
         Entity entity = this.getOwner();
         if (entity instanceof LivingEntity livingentity) {
-            hit.getEntity().hurt(this.damageSources().mobProjectile(this, livingentity), baseDamage);
+            hit.getEntity().hurt(this.damageSources().mobProjectile(this, livingentity), this.activeDamage);
         }
         
         this.discard();
@@ -81,16 +94,16 @@ public class GenericBullet extends AbstractStaffBolt{
     protected void tickDespawn() {
         ++this.life;
 
-        if (this.life >= 5) {
-            this.baseDamage = 1.0F;
+        if (this.life >= fallOff1) {
+            this.activeDamage = this.damage1;
             this.setTrailParticle(ParticleTypes.SMOKE);
         }
         
-        if (this.life >= 8) {
-            this.baseDamage = 0.0F;
+        if (this.life >= fallOff2) {
+            this.activeDamage = this.damage2;
         }
 
-        if (this.life >= 10) {
+        if (this.life >= end) {
             this.discard();
         }
 

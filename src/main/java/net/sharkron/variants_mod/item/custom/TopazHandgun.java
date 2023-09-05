@@ -14,9 +14,9 @@ import net.minecraft.world.phys.Vec3;
 import net.sharkron.variants_mod.entity.custom.GenericBullet;
 import net.sharkron.variants_mod.item.ModItems;
 
-public class Handgun extends Item{
+public class TopazHandgun extends Item{
 
-    public Handgun(Properties pProperties){
+    public TopazHandgun(Properties pProperties){
         super(pProperties);
     }
 
@@ -30,7 +30,7 @@ public class Handgun extends Item{
         else{
             Vec3 look = player.getLookAngle(); // Get the player's look vector
 
-            GenericBullet proj1 = new GenericBullet(level, player, look.x, look.y, look.z, 7.0F, 5, 6.0F, 7, 4.0F, 10);
+            GenericBullet proj1 = new GenericBullet(level, player, look.x, look.y, look.z, 11.0F, 1, 8.0F, 1, 8.0F, 7);
 
             level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.FLINTANDSTEEL_USE, SoundSource.PLAYERS, 1.0F, 1.0F);
             

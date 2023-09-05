@@ -11,11 +11,13 @@ import net.sharkron.variants_mod.client.renderer.CharcoalStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.CopperStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.DiamondStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.GenericBulletRenderer;
+import net.sharkron.variants_mod.client.renderer.MiniDiamondBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.NetheriteForkProjectileRenderer;
 import net.sharkron.variants_mod.client.renderer.RedstoneSpellbookProjectileRenderer;
 import net.sharkron.variants_mod.client.renderer.SeedBulletRenderer;
 import net.sharkron.variants_mod.client.renderer.SporeStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.StoneLauncherProjectileRenderer;
+import net.sharkron.variants_mod.client.renderer.TopazSpellbookBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.TopazStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.TorchTombProjectileRenderer;
 import net.sharkron.variants_mod.entity.ModEntity;
@@ -36,5 +38,7 @@ public class ClientSetup {
         EntityRenderers.register(ModEntity.SPORE_STAFF_BOLT.get(), SporeStaffBoltRenderer::new);
         EntityRenderers.register(ModEntity.REDSTONE_SPELLBOOK_PROJECTILE.get(), RedstoneSpellbookProjectileRenderer::new);
         EntityRenderers.register(ModEntity.GENERIC_BULLET.get(), GenericBulletRenderer::new);
+        EntityRenderers.register(ModEntity.TOPAZ_SPELLBOOK_MAIN_BOLT.get(), TopazSpellbookBoltRenderer::new);
+        EntityRenderers.register(ModEntity.MINI_DIAMOND_BOLT.get(), MiniDiamondBoltRenderer::new);
     }
 }

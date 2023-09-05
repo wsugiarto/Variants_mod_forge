@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "S": {
+      "item": "variants_mod:topaz_block"
+    },
+    "T": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "TST",
+    "TBT",
+    "T#T"
+  ],
+  "result": {
+    "item": "variants_mod:topaz_spellbook"
+  },
+  "show_notification": true
+}

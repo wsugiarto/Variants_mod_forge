@@ -2,11 +2,11 @@ package net.sharkron.variants_mod.entity.custom;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.NetworkHooks;
-import net.sharkron.variants_mod.entity.ModEntity;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.protocol.Packet;
@@ -14,19 +14,20 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.ShulkerBullet;
 
-public class TopazStaffBolt extends AbstractStaffBolt{
+public class MiniDiamondBolt extends ShulkerBullet{
     private int life;
 
-    public TopazStaffBolt(EntityType<? extends TopazStaffBolt> p, Level level){
+    public MiniDiamondBolt(EntityType<? extends MiniDiamondBolt> p, Level level){
         super(p, level);
     }
 
     // This should be constructor for non abstract
-    public TopazStaffBolt(Level level, LivingEntity owner, double x, double y, double z){
-        this(ModEntity.TOPAZ_BOLT.get(), level);
-        this.setOwner(owner);
-        this.setPos(owner.getX(), owner.getY() + owner.getEyeHeight(), owner.getZ());
+    public MiniDiamondBolt(Level level, LivingEntity owner, Entity target, Projectile source){
+        super(level, owner, target, source.getDirection().getAxis());
+        
         
     }
 
@@ -38,34 +39,33 @@ public class TopazStaffBolt extends AbstractStaffBolt{
         double d0 = this.getX() + vec3.x;
         double d1 = this.getY() + vec3.y;
         double d2 = this.getZ() + vec3.z;
-        this.level().addParticle(this.getTrailParticle(), d0, d1 + 0.3, d2, 0.0D, 0.0D, 0.0D); // adding particle
+        this.level().addParticle(this.getTrailParticle(), d0, d1 + 0.3, d2, 0.0D, 0.0D, 0.0D);
         if (this.level().getBlockStates(this.getBoundingBox()).noneMatch(BlockBehaviour.BlockStateBase::isAir)) { // If in a block
-            // this.discard(); // can pierce through blocks this way
+            this.tickDespawn();
         } else if (this.isInWaterOrBubble()) { // under water
             this.setDeltaMovement(vec3.scale((double)1.0F));
             this.tickDespawn();
         } else { // in air
-            this.setDeltaMovement(vec3.scale((double)1.0F)); // this changes friction
+            this.setDeltaMovement(vec3.scale((double)1.1F)); // this changes friction
             this.tickDespawn();
-            // if (!this.isNoGravity()) { // if gravity
-            //     this.setDeltaMovement(this.getDeltaMovement().add(0.0D, (double)0, 0.0D));
-            // }
         }
     }
 
-    // These should be in the non abstract class 
+    @Override
     protected void onHitEntity(EntityHitResult hit) {
-        super.onHitEntity(hit);
-        float damage = 6.0F;
+        float damage = 7.0F;
         Entity entity = this.getOwner();
         if (entity instanceof LivingEntity livingentity) {
             hit.getEntity().hurt(this.damageSources().mobProjectile(this, livingentity), damage);
         }
+        this.discard();
 
     }
 
+    @Override
     protected void onHitBlock(BlockHitResult hit) {
-        super.onHitBlock(hit);
+        BlockState blockstate = this.level().getBlockState(hit.getBlockPos());
+        blockstate.onProjectileHit(this.level(), blockstate, hit, this);
         if (!this.level().isClientSide) {
         }
 
@@ -74,14 +74,14 @@ public class TopazStaffBolt extends AbstractStaffBolt{
     // Timer before it despawns
     protected void tickDespawn() {
         ++this.life;
-        if (this.life >= 20) {
+        if (this.life >= 80) {
             this.discard();
         }
 
     }
 
     protected ParticleOptions getTrailParticle() {
-        return ParticleTypes.INSTANT_EFFECT;
+        return ParticleTypes.SNOWFLAKE;
     }
 
     protected void defineSynchedData() {

@@ -1,12 +1,25 @@
+<<<<<<< HEAD
+// 1.20.1	2023-09-03T23:16:16.7724783	Recipes
+=======
 // 1.20.1	2023-09-01T13:29:28.7359822	Recipes
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 56b2bb7113048e7b55ddce80bd6b99ce9cc23757 data/minecraft/advancements/recipes/combat/netherite_dagger_smithing.json
 32f07d2f3878fd7593c884a59c9ae71a458ab756 data/minecraft/advancements/recipes/combat/netherite_fork_smithing.json
 7362cf238ff938ef6ecec4f119ba2e60a6e77a7a data/minecraft/recipes/netherite_dagger_smithing.json
 48b0ec01afe064c9822e3e497f7c40d19b9461a5 data/minecraft/recipes/netherite_fork_smithing.json
+<<<<<<< HEAD
+d229c8ef4b97a908b0445b9d7f7f725dc6a591f0 data/variants_mod/advancements/recipes/combat/amethyst_rifle.json
+=======
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 ea0c127add80d6774e5ac205c06b80375bf34050 data/variants_mod/advancements/recipes/combat/amethyst_spellbook.json
 d8f21320e96d95d374ba63b8082817dd729d00c2 data/variants_mod/advancements/recipes/combat/charcoal_staff.json
 cec5601d742c2ebd2828e61d037e3b0d54a225bd data/variants_mod/advancements/recipes/combat/copper_staff.json
 d3c106093da4ce4d0c1fb427bdbb08f00c1d05e2 data/variants_mod/advancements/recipes/combat/diamond_dagger.json
+<<<<<<< HEAD
+d0e9434432c3456f3e4bebb44fa2806f35d854b7 data/variants_mod/advancements/recipes/combat/diamond_rifle.json
+e67f7f7f204d44405feb321c1cf7911c7d314920 data/variants_mod/advancements/recipes/combat/diamond_sniper.json
+=======
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 969da5f15eb3efb02d214781c54f8e2080e185ef data/variants_mod/advancements/recipes/combat/diamond_staff.json
 1d8b0797aef937ae041534e00f52554af19d9a34 data/variants_mod/advancements/recipes/combat/gold_dagger.json
 f73151a099d2317d9c26fb760ea8e7fddbcce7b7 data/variants_mod/advancements/recipes/combat/handgun.json
@@ -16,6 +29,11 @@ a4212cbd47340d21fab2b3315dada9e86e710ded data/variants_mod/advancements/recipes/
 4250b67ea489bdf02ed5c8803174bda69f1f3a62 data/variants_mod/advancements/recipes/combat/stone_dagger.json
 af96a3392060b95114d32eb5acbb9857498c2875 data/variants_mod/advancements/recipes/combat/stone_launcher.json
 28973f2d19c7582ae627f232275b4163bddf5bc4 data/variants_mod/advancements/recipes/combat/tnt_gun.json
+<<<<<<< HEAD
+f67a6f460951150fb5e71474faf4e04e26e9b577 data/variants_mod/advancements/recipes/combat/topaz_handgun.json
+725aeb5fb0bd951122fc28726bb4fd1089a082ad data/variants_mod/advancements/recipes/combat/topaz_spellbook.json
+=======
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 2200472324c2f6cdff968c5cd46ae20fe29d9023 data/variants_mod/advancements/recipes/combat/topaz_staff.json
 9b2d709d64ac122c2b2ba050c519ab82a2007606 data/variants_mod/advancements/recipes/combat/torch_tomb.json
 3f3855c498ba7bc4214cab0ba269f8f052c660d6 data/variants_mod/advancements/recipes/combat/wooden_stake.json
@@ -25,12 +43,21 @@ af96a3392060b95114d32eb5acbb9857498c2875 data/variants_mod/advancements/recipes/
 5db121df4dfbe93c44f06cff86d26639e7b4b319 data/variants_mod/advancements/recipes/misc/topaz_block.json
 317b9eb3df90bec0cf233c0106d84f1bcc478b0c data/variants_mod/advancements/recipes/misc/topaz_from_blasting_topaz_ore.json
 c6d7f689d8f6ac22753c5f627133ab4fb4f35871 data/variants_mod/advancements/recipes/misc/topaz_from_smelting_topaz_ore.json
+<<<<<<< HEAD
+c8981e0d0efb0b5f62f7fd1c50e83ca68dd8fbf8 data/variants_mod/recipes/amethyst_rifle.json
+=======
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 d38eee85d1e7e7b4e4881e4c5da4661e10776d75 data/variants_mod/recipes/amethyst_spellbook.json
 c0b8ae699e40e5f85a9cbeeebb51692bcbc04d9e data/variants_mod/recipes/blowpipe.json
 1bdcee150d91e7d34129366dfc0a980f5c227ecc data/variants_mod/recipes/bullet.json
 571f28927a525283ac2b30e1f00d3c8c95d51c5a data/variants_mod/recipes/charcoal_staff.json
 b835c906d5f23a7505a4bcfb7f42f39332cc3082 data/variants_mod/recipes/copper_staff.json
 3eb22d766f099af17d764c2eb9a444e159eb3759 data/variants_mod/recipes/diamond_dagger.json
+<<<<<<< HEAD
+d772953e995d14ef3f64db0995fefe8176bde013 data/variants_mod/recipes/diamond_rifle.json
+26384cf991ad8c3906e71a085802f85c27ab1d4d data/variants_mod/recipes/diamond_sniper.json
+=======
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 02bd12a081854f5db7496c3b9401155101987d85 data/variants_mod/recipes/diamond_staff.json
 3d93eec237f5f130910365e1db5467d25b0a0370 data/variants_mod/recipes/gold_dagger.json
 f00abeb52754677a8c13cc6e375eef29d3eaa7fa data/variants_mod/recipes/handgun.json
@@ -44,6 +71,11 @@ f00abeb52754677a8c13cc6e375eef29d3eaa7fa data/variants_mod/recipes/handgun.json
 62f9df705788026a18fea1250a4b0d813edfd835 data/variants_mod/recipes/topaz_block.json
 3d00a71cd29174587f8fe0d1667843c313ec210c data/variants_mod/recipes/topaz_from_blasting_topaz_ore.json
 72ccdf5191f719ccea93c72c4f0e16df277e811f data/variants_mod/recipes/topaz_from_smelting_topaz_ore.json
+<<<<<<< HEAD
+363d473f74ce2cbb7a469145255df985b32d580c data/variants_mod/recipes/topaz_handgun.json
+03e7cfee064d0409abc6596ad7bbe091b7351d3a data/variants_mod/recipes/topaz_spellbook.json
+=======
+>>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
 335b8fd59bb7d7c388d9ed48340444236d2a0039 data/variants_mod/recipes/topaz_staff.json
 b50e82e9053caae77b6245a9a087ed3f398add7a data/variants_mod/recipes/torch_tomb.json
 abd9c894b4458af40f6cc78e2cd7d412c92c4ffd data/variants_mod/recipes/wooden_stake.json

@@ -11,10 +11,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
-import net.sharkron.variants_mod.entity.custom.DiamondStaffBolt;
+import net.sharkron.variants_mod.entity.custom.TopazSpellbookMainBolt;
 
-public class DiamondStaff extends Item{
-    public DiamondStaff(Properties pProperties){
+public class TopazSpellbook extends Item{
+    public TopazSpellbook(Properties pProperties){
         super(pProperties);
     }
 
@@ -26,15 +26,14 @@ public class DiamondStaff extends Item{
         if (level.isClientSide || itemstack.getDamageValue() >= maxUseBeforeBroken) {
             return InteractionResultHolder.fail(itemstack);
         }
+        else{
+            Vec3 look = player.getLookAngle();
 
-        else {
-            Vec3 look = player.getLookAngle(); // Get the player's look vector
+            TopazSpellbookMainBolt proj1 = new TopazSpellbookMainBolt(level, player, look.x, look.y, look.z);
 
-            DiamondStaffBolt proj1 = new DiamondStaffBolt(level, player, look.x, look.y, look.z);
-
-            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.TRIDENT_RETURN, SoundSource.PLAYERS, 1.0F, 1.0F);
+            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.END_PORTAL_FRAME_FILL, SoundSource.PLAYERS, 1.0F, 1.0F);
             
-            level.addFreshEntity(proj1);
+            level.addFreshEntity(proj1); // adding the entity into the world level
             player.getCooldowns().addCooldown(this, 15);
             itemstack.hurtAndBreak(manaCost, player, 
                     p -> p.broadcastBreakEvent(hand));

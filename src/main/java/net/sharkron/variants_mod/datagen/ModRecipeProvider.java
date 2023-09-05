@@ -62,6 +62,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         spellbookCrafting(RecipeCategory.COMBAT, ModItems.TORCH_TOMB.get(), Items.TORCH, Items.COAL_BLOCK, ItemTags.LOGS, pWriter);
         spellbookCrafting(RecipeCategory.COMBAT, ModItems.REDSTONE_SPELLBOOK.get(), Items.REDSTONE_BLOCK, Items.IRON_BLOCK, Items.IRON_INGOT, pWriter);
         spellbookCrafting(RecipeCategory.COMBAT, ModItems.AMETHYST_SPELLBOOK.get(), Items.AMETHYST_SHARD, Items.GOLD_BLOCK, Items.GOLD_INGOT, pWriter);
+        spellbookCrafting(RecipeCategory.COMBAT, ModItems.TOPAZ_SPELLBOOK.get(), ModBlocks.TOPAZ_BLOCK.get(), Items.GOLD_BLOCK, Items.GOLD_INGOT, pWriter);
                 
         // Daggers
         daggerCrafting(RecipeCategory.COMBAT, ModItems.WOODEN_STAKE.get(), ItemTags.LOGS, pWriter);
@@ -88,6 +89,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         
         gunCrafting(RecipeCategory.COMBAT, ModItems.STONE_LAUNCHER.get(), Items.FURNACE, Items.SMOOTH_STONE, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.HANDGUN.get(), Items.BLAST_FURNACE, Items.IRON_INGOT, pWriter);
+        gunCrafting(RecipeCategory.COMBAT, ModItems.TOPAZ_HANDGUN.get(), ModItems.HANDGUN.get(), ModItems.TOPAZ.get(), pWriter);
+        gunCrafting(RecipeCategory.COMBAT, ModItems.AMETHYST_RIFLE.get(), Items.GOLD_BLOCK, Items.AMETHYST_SHARD, pWriter);
+        gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_RIFLE.get(), Items.DIAMOND, Items.DIAMOND, pWriter);
+        gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_SNIPER.get(), Items.DIAMOND_BLOCK, Items.DIAMOND, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.TNT_GUN.get(), Items.TNT, Items.NETHERITE_INGOT, pWriter);
     }
     
