@@ -32,7 +32,7 @@ public class Handgun extends Item{
 
             GenericBullet proj1 = new GenericBullet(level, player, look.x, look.y, look.z, 7.0F, 5, 6.0F, 7, 4.0F, 10);
 
-            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.FLINTANDSTEEL_USE, SoundSource.PLAYERS, 1.0F, 1.0F);
+            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.TNT_PRIMED, SoundSource.PLAYERS, 1.0F, 1.0F);
             
             level.addFreshEntity(proj1); // adding the entity into the world level
             consumeAmmo(player);

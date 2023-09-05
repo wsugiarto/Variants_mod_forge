@@ -29,6 +29,8 @@ public class ModCreativeTabs {
                 output.accept(ModItems.AMETHYST_RIFLE.get()); 
                 output.accept(ModItems.DIAMOND_RIFLE.get()); 
                 output.accept(ModItems.DIAMOND_SNIPER.get()); 
+                output.accept(ModItems.NETHERITE_RIFLE.get()); 
+                output.accept(ModItems.NETHERITE_EAGLE.get()); 
                 output.accept(ModItems.TNT_GUN.get()); 
                 output.accept(ModBlocks.TOPAZ_BLOCK.get());
                 output.accept(ModBlocks.TOPAZ_ORE.get());
@@ -48,8 +50,10 @@ public class ModCreativeTabs {
                 output.accept(ModItems.TOPAZ_SPELLBOOK.get());
                 output.accept(ModItems.DIAMOND_STAFF.get());
                 output.accept(ModItems.NETHERITE_FORK.get());
+                output.accept(ModItems.PRISMARINE_SPELLBOOK.get());
                 output.accept(ModItems.AMETHYST_SPELLBOOK.get());
                 output.accept(ModItems.TOPAZ_SPELLBOOK.get());
+                output.accept(ModItems.UNIVERSAL_SPELLBOOK.get());
                 output.accept(ModItems.SPORE_STAFF.get());
                 output.accept(ModItems.METAL_DETECTOR.get());
                 

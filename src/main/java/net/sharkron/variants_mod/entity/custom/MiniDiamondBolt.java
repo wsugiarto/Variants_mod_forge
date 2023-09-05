@@ -19,15 +19,22 @@ import net.minecraft.world.entity.projectile.ShulkerBullet;
 
 public class MiniDiamondBolt extends ShulkerBullet{
     private int life;
+    private float damage;
 
     public MiniDiamondBolt(EntityType<? extends MiniDiamondBolt> p, Level level){
         super(p, level);
     }
 
     // This should be constructor for non abstract
-    public MiniDiamondBolt(Level level, LivingEntity owner, Entity target, Projectile source){
+    public MiniDiamondBolt(Level level, LivingEntity owner, Entity target, Projectile source, float damage){
         super(level, owner, target, source.getDirection().getAxis());
+        this.damage = damage;
         
+    }
+
+    public MiniDiamondBolt(Level level, LivingEntity owner, Entity target, Entity source, float damage){
+        super(level, owner, target, source.getDirection().getAxis());
+        this.damage = damage;
         
     }
 
@@ -46,14 +53,14 @@ public class MiniDiamondBolt extends ShulkerBullet{
             this.setDeltaMovement(vec3.scale((double)1.0F));
             this.tickDespawn();
         } else { // in air
-            this.setDeltaMovement(vec3.scale((double)1.1F)); // this changes friction
+            this.setDeltaMovement(vec3.scale((double)1.0F)); // this changes friction
             this.tickDespawn();
         }
     }
 
     @Override
     protected void onHitEntity(EntityHitResult hit) {
-        float damage = 7.0F;
+        float damage = this.damage;
         Entity entity = this.getOwner();
         if (entity instanceof LivingEntity livingentity) {
             hit.getEntity().hurt(this.damageSources().mobProjectile(this, livingentity), damage);

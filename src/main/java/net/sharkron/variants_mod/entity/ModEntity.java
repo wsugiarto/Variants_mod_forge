@@ -23,6 +23,7 @@ import net.sharkron.variants_mod.entity.custom.StoneLauncherProjectile;
 import net.sharkron.variants_mod.entity.custom.TopazSpellbookMainBolt;
 import net.sharkron.variants_mod.entity.custom.TopazStaffBolt;
 import net.sharkron.variants_mod.entity.custom.TorchTombProjectile;
+import net.sharkron.variants_mod.entity.custom.UniversalSpellbookBolt;
 import net.sharkron.variants_mod.entity.custom.VexxProjectile;
 
 public class ModEntity {
@@ -78,6 +79,9 @@ public class ModEntity {
 
     public static final RegistryObject<EntityType<Grenade>> GRENADE = ENTITY_TYPES.register("grenade", 
             () -> EntityType.Builder.of((EntityType.EntityFactory<Grenade>) Grenade::new, MobCategory.MISC).sized(0.5F,0.5F).build("grenade"));
+            
+    public static final RegistryObject<EntityType<UniversalSpellbookBolt>> UNIVERSAL_SPELLBOOK_BOLT = ENTITY_TYPES.register("universal_spellbook_bolt", 
+            () -> EntityType.Builder.of((EntityType.EntityFactory<UniversalSpellbookBolt>) UniversalSpellbookBolt::new, MobCategory.MISC).sized(0.5F,0.5F).build("universal_spellbook_bolt"));
             
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);

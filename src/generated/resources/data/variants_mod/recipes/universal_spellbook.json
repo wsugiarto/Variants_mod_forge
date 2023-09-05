@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "variants_mod:spore_staff"
+    },
+    "B": {
+      "item": "variants_mod:redstone_spellbook"
+    },
+    "S": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "TST",
+    "TBT",
+    "T#T"
+  ],
+  "result": {
+    "item": "variants_mod:universal_spellbook"
+  },
+  "show_notification": true
+}

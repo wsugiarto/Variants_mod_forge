@@ -14,9 +14,9 @@ import net.minecraft.world.phys.Vec3;
 import net.sharkron.variants_mod.entity.custom.GenericBullet;
 import net.sharkron.variants_mod.item.ModItems;
 
-public class TopazHandgun extends Item{
+public class NetheriteRifle extends Item{
 
-    public TopazHandgun(Properties pProperties){
+    public NetheriteRifle(Properties pProperties){
         super(pProperties);
     }
 
@@ -30,13 +30,13 @@ public class TopazHandgun extends Item{
         else{
             Vec3 look = player.getLookAngle(); // Get the player's look vector
 
-            GenericBullet proj1 = new GenericBullet(level, player, look.x, look.y, look.z, 11.0F, 1, 8.0F, 1, 8.0F, 7);
+            GenericBullet proj1 = new GenericBullet(level, player, look.x, look.y, look.z, 11.0F, 9, 6.0F, 9, 6.0F, 16);
 
-            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.TNT_PRIMED, SoundSource.PLAYERS, 1.0F, 1.0F);
+            level.playSound((Player)null, player.getX(), player.getY(), player.getZ(), SoundEvents.FLINTANDSTEEL_USE, SoundSource.PLAYERS, 1.0F, 1.0F);
             
             level.addFreshEntity(proj1); // adding the entity into the world level
             consumeAmmo(player);
-            player.getCooldowns().addCooldown(this, 20);
+            player.getCooldowns().addCooldown(this, 7);
             itemstack.hurtAndBreak(1, player, 
                     p -> p.broadcastBreakEvent(hand));
 

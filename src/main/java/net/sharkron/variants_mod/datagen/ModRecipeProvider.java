@@ -63,7 +63,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         spellbookCrafting(RecipeCategory.COMBAT, ModItems.REDSTONE_SPELLBOOK.get(), Items.REDSTONE_BLOCK, Items.IRON_BLOCK, Items.IRON_INGOT, pWriter);
         spellbookCrafting(RecipeCategory.COMBAT, ModItems.AMETHYST_SPELLBOOK.get(), Items.AMETHYST_SHARD, Items.GOLD_BLOCK, Items.GOLD_INGOT, pWriter);
         spellbookCrafting(RecipeCategory.COMBAT, ModItems.TOPAZ_SPELLBOOK.get(), ModBlocks.TOPAZ_BLOCK.get(), Items.GOLD_BLOCK, Items.GOLD_INGOT, pWriter);
-                
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.PRISMARINE_SPELLBOOK.get())
+            .pattern("TST")
+            .pattern("TBT")
+            .pattern("T#T")
+            .define('B', ModItems.AMETHYST_SPELLBOOK.get())
+            .define('S', Items.NETHERITE_INGOT)
+            .define('#', Items.CONDUIT)
+            .define('T', Items.DIAMOND)
+            .unlockedBy(getHasName(ModItems.AMETHYST_SPELLBOOK.get()), has(ModItems.AMETHYST_SPELLBOOK.get()))
+            .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.UNIVERSAL_SPELLBOOK.get())
+            .pattern("TST")
+            .pattern("TBT")
+            .pattern("T#T")
+            .define('B', ModItems.REDSTONE_SPELLBOOK.get())
+            .define('S', Items.NETHERITE_INGOT)
+            .define('#', ModItems.SPORE_STAFF.get())
+            .define('T', Items.DIAMOND)
+            .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+            .save(pWriter);
+        
         // Daggers
         daggerCrafting(RecipeCategory.COMBAT, ModItems.WOODEN_STAKE.get(), ItemTags.LOGS, pWriter);
         daggerCrafting(RecipeCategory.COMBAT, ModItems.STONE_DAGGER.get(), ItemTags.STONE_TOOL_MATERIALS, pWriter);
@@ -93,6 +113,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         gunCrafting(RecipeCategory.COMBAT, ModItems.AMETHYST_RIFLE.get(), Items.GOLD_BLOCK, Items.AMETHYST_SHARD, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_RIFLE.get(), Items.DIAMOND, Items.DIAMOND, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_SNIPER.get(), Items.DIAMOND_BLOCK, Items.DIAMOND, pWriter);
+        netheriteSmithing(pWriter, ModItems.DIAMOND_RIFLE.get(), RecipeCategory.COMBAT, ModItems.NETHERITE_RIFLE.get());
+        netheriteSmithing(pWriter, ModItems.TOPAZ_HANDGUN.get(), RecipeCategory.COMBAT, ModItems.NETHERITE_EAGLE.get());
         gunCrafting(RecipeCategory.COMBAT, ModItems.TNT_GUN.get(), Items.TNT, Items.NETHERITE_INGOT, pWriter);
     }
     

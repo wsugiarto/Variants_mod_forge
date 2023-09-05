@@ -21,6 +21,7 @@ import net.sharkron.variants_mod.client.renderer.StoneLauncherProjectileRenderer
 import net.sharkron.variants_mod.client.renderer.TopazSpellbookBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.TopazStaffBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.TorchTombProjectileRenderer;
+import net.sharkron.variants_mod.client.renderer.UniversalSpellbookBoltRenderer;
 import net.sharkron.variants_mod.client.renderer.VexxProjectileRenderer;
 import net.sharkron.variants_mod.entity.ModEntity;
 
@@ -44,5 +45,6 @@ public class ClientSetup {
         EntityRenderers.register(ModEntity.MINI_DIAMOND_BOLT.get(), MiniDiamondBoltRenderer::new);
         EntityRenderers.register(ModEntity.VEXX_PROJECTILE.get(), VexxProjectileRenderer::new);
         EntityRenderers.register(ModEntity.BOUNCING_HEAD.get(), BouncingHeadRenderer::new);
+        EntityRenderers.register(ModEntity.UNIVERSAL_SPELLBOOK_BOLT.get(), UniversalSpellbookBoltRenderer::new);
     }
 }

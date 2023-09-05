@@ -69,15 +69,15 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
         if (entity instanceof LivingEntity livingentity) {
             hit.getEntity().hurt(this.damageSources().mobProjectile(this, livingentity), damage);
             
-            MiniDiamondBolt proj1 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            MiniDiamondBolt proj1 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this, 7.0F);
             proj1.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
             proj1.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
 
-            MiniDiamondBolt proj2 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            MiniDiamondBolt proj2 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this, 7.0F);
             proj2.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
             proj2.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
 
-            MiniDiamondBolt proj3 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            MiniDiamondBolt proj3 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this, 7.0F);
             proj3.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
             proj3.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
 
@@ -93,15 +93,15 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
         super.onHitBlock(hit); // apparently this is just so the block knows it got hit
         if (!this.level().isClientSide) {
             
-            MiniDiamondBolt proj1 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            MiniDiamondBolt proj1 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(), this, 7.0F);
             proj1.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
             proj1.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
 
-            MiniDiamondBolt proj2 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            MiniDiamondBolt proj2 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(), this, 7.0F);
             proj2.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
             proj2.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
 
-            MiniDiamondBolt proj3 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(),this);
+            MiniDiamondBolt proj3 = new MiniDiamondBolt(this.level(), this.player, this.getNearestHostile(), this, 7.0F);
             proj3.setPos(this.getX(), this.getY() + this.getEyeHeight(), this.getZ());
             proj3.shoot(this.getX(), this.getY(), this.getZ(), 0.05F, 1000F);
 
@@ -124,7 +124,7 @@ public class DiamondStaffBolt extends AbstractStaffBolt{
     }
 
     protected Entity getNearestHostile(){
-        AABB aabb = this.getBoundingBox().inflate(8.0D); // 8 blocks within the main bullet
+        AABB aabb = this.getBoundingBox().inflate(64.0D); // 64 blocks within the main bullet
         TargetingConditions targetConditions = TargetingConditions.forCombat().range(64).selector(Entity::isAlive);
 
         // return this.level().getNearestEntities(null, getBoundingBox(), Entity::isAlive);

@@ -34,7 +34,9 @@ public class ModItemTagGenerator extends ItemTagsProvider{
             .add(ModItems.AMETHYST_SPELLBOOK.get())
             .add(ModItems.TOPAZ_SPELLBOOK.get())
             .add(ModItems.DIAMOND_STAFF.get())
-            .add(ModItems.NETHERITE_FORK.get());
+            .add(ModItems.NETHERITE_FORK.get())
+            .add(ModItems.PRISMARINE_SPELLBOOK.get())
+            .add(ModItems.UNIVERSAL_SPELLBOOK.get());
 
         
         this.tag(ModTags.Items.SEEDS)

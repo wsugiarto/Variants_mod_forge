@@ -18,8 +18,11 @@ import net.sharkron.variants_mod.item.custom.GambleItem;
 import net.sharkron.variants_mod.item.custom.GrenadeItem;
 import net.sharkron.variants_mod.item.custom.Handgun;
 import net.sharkron.variants_mod.item.custom.MetalDetectorItem;
+import net.sharkron.variants_mod.item.custom.NetheriteEagle;
 import net.sharkron.variants_mod.item.custom.NetheriteFork;
+import net.sharkron.variants_mod.item.custom.NetheriteRifle;
 import net.sharkron.variants_mod.item.custom.PonderingOrb;
+import net.sharkron.variants_mod.item.custom.PrismarineSpellbook;
 import net.sharkron.variants_mod.item.custom.RedstoneSpellbook;
 import net.sharkron.variants_mod.item.custom.SporeStaff;
 import net.sharkron.variants_mod.item.custom.StoneLauncher;
@@ -28,6 +31,7 @@ import net.sharkron.variants_mod.item.custom.TopazHandgun;
 import net.sharkron.variants_mod.item.custom.TopazSpellbook;
 import net.sharkron.variants_mod.item.custom.TopazStaff;
 import net.sharkron.variants_mod.item.custom.TorchTomb;
+import net.sharkron.variants_mod.item.custom.UniversalSpellbook;
 import net.sharkron.variants_mod.item.custom.VexxStaff;
 import net.sharkron.variants_mod.item.custom.WitherCannon;
 import net.minecraft.world.item.Item;
@@ -95,6 +99,12 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_FORK = ITEMS.register("netherite_fork",
         () -> new NetheriteFork(new Item.Properties().durability(100)));
 
+    public static final RegistryObject<Item> PRISMARINE_SPELLBOOK = ITEMS.register("prismarine_spellbook",
+        () -> new PrismarineSpellbook(new Item.Properties().durability(100)));
+
+    public static final RegistryObject<Item> UNIVERSAL_SPELLBOOK = ITEMS.register("universal_spellbook",
+        () -> new UniversalSpellbook(new Item.Properties().durability(100)));
+
     // Guns
     public static final RegistryObject<Item> BOULETS = ITEMS.register("bullet",
         () -> new Item(new Item.Properties()));
@@ -119,6 +129,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> DIAMOND_SNIPER = ITEMS.register("diamond_sniper",
         () -> new DiamondSniper(new Item.Properties().durability(1561)));
+        
+    public static final RegistryObject<Item> NETHERITE_RIFLE = ITEMS.register("netherite_rifle",
+        () -> new NetheriteRifle(new Item.Properties().durability(2032)));
+        
+    public static final RegistryObject<Item> NETHERITE_EAGLE = ITEMS.register("netherite_eagle",
+        () -> new NetheriteEagle(new Item.Properties().durability(2032)));
 
     public static final RegistryObject<Item> TNT_GUN = ITEMS.register("tnt_gun",
         () -> new TNTGun(new Item.Properties().durability(2032)));
