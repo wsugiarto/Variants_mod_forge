@@ -5,13 +5,10 @@
     "item.variants_mod.blowpipe": "Blowpipe",
     "item.variants_mod.stone_launcher": "Stone Launcher",
     "item.variants_mod.handgun": "Handgun",
-<<<<<<< HEAD
     "item.variants_mod.topaz_handgun": "Topaz-Trimmed Handgun",
     "item.variants_mod.amethyst_rifle": "Amethyst Rifle",
     "item.variants_mod.diamond_rifle": "Diamond Rifle",
     "item.variants_mod.diamond_sniper": "Diamond Sniper",
-=======
->>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
     "item.variants_mod.topaz": "Topaz",
     "item.variants_mod.metal_detector": "Metal Detector",
     "item.variants_mod.topaz_staff": "Topaz Staff",
@@ -23,10 +20,7 @@
     "item.variants_mod.diamond_staff": "Diamond Staff",
     "item.variants_mod.netherite_fork": "Netherite Fork",
     "item.variants_mod.amethyst_spellbook": "Amethyst Spellbook",
-<<<<<<< HEAD
     "item.variants_mod.topaz_spellbook": "Topaz Spellbook",
-=======
->>>>>>> a83a0a1d4ca9ef01c9e2c6ff19dcd884ea7acc25
     "item.variants_mod.wooden_stake": "Wooden Stake",
     "item.variants_mod.stone_dagger": "Stone Dagger",
     "item.variants_mod.iron_dagger": "Iron Dagger",

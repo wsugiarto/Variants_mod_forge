@@ -46,6 +46,10 @@ public class ModItemModelProvider extends ItemModelProvider{
         this.simpleItem(ModItems.AMETHYST_RIFLE);
         this.simpleItem(ModItems.DIAMOND_RIFLE);
         this.simpleItem(ModItems.DIAMOND_SNIPER);
+        this.simpleItem(ModItems.GAMBLE_ITEM);
+        this.simpleItem(ModItems.VEXX_STAFF);
+        this.simpleItem(ModItems.BOUNCE_CANNON);
+        this.simpleItem(ModItems.GRENADE_ITEM);
         
         this.simpleItem(ModItems.WITHER_CANNON);
     }
