@@ -50,6 +50,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.TOPAZ_BLOCK.get()), has(ModBlocks.TOPAZ_BLOCK.get()))
                 .save(pWriter);
         
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PONDERING_ORB.get())
+            .pattern("SSS")
+            .pattern("SAS")
+            .pattern("SSS")
+            .define('S', ItemTags.LOGS)
+            .define('A', Items.APPLE)
+            .unlockedBy("has_log", has(Items.OAK_LOG))
+            .save(pWriter);
+
         // Staves
         staffCrafting(RecipeCategory.COMBAT, ModItems.CHARCOAL_STAFF.get(), Items.CHARCOAL, ItemTags.PLANKS, ItemTags.LOGS, pWriter);
         staffCrafting(RecipeCategory.COMBAT, ModItems.COPPER_STAFF.get(), Items.COPPER_BLOCK, Items.STONE, ItemTags.STONE_TOOL_MATERIALS, pWriter);

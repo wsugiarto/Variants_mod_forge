@@ -74,4 +74,14 @@ public class StoneLauncher extends Item{
             }
         }
     }
+
+    @Override
+    public int getEnchantmentValue(){
+        return 1;
+    }
+
+    @Override
+    public boolean canBeDepleted(){
+        return true;
+    }
 }

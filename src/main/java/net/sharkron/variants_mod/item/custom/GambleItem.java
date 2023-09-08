@@ -43,4 +43,14 @@ public class GambleItem extends Item {
         player.getCooldowns().addCooldown(this, 10);
         return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
     }
+
+    @Override
+    public int getEnchantmentValue(){
+        return 1;
+    }
+
+    @Override
+    public boolean canBeDepleted(){
+        return true;
+    }
 }

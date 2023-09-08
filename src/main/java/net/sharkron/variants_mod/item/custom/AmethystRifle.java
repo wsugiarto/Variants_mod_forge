@@ -8,13 +8,14 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Vanishable;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
 import net.sharkron.variants_mod.entity.custom.GenericBullet;
 import net.sharkron.variants_mod.item.ModItems;
 
-public class AmethystRifle extends Item{
+public class AmethystRifle extends Item implements Vanishable{
 
     public AmethystRifle(Properties pProperties){
         super(pProperties);
@@ -74,5 +75,15 @@ public class AmethystRifle extends Item{
                 return;
             }
         }
+    }
+
+    @Override
+    public int getEnchantmentValue(){
+        return 1;
+    }
+
+    @Override
+    public boolean canBeDepleted(){
+        return true;
     }
 }

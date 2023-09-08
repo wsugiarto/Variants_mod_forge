@@ -88,4 +88,14 @@ public class TNTGun extends Item{
     public boolean isValidRepairItem(ItemStack p_41134_, ItemStack p_41135_) {
         return p_41135_.is(Items.IRON_INGOT);
     }
+
+    @Override
+    public int getEnchantmentValue(){
+        return 1;
+    }
+
+    @Override
+    public boolean canBeDepleted(){
+        return true;
+    }
 }

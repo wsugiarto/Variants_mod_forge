@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-05T22:45:01.0002427	Recipes
+// 1.20.1	2023-09-08T12:04:10.0326544	Recipes
 56b2bb7113048e7b55ddce80bd6b99ce9cc23757 data/minecraft/advancements/recipes/combat/netherite_dagger_smithing.json
 2a9eed6eebd8be34cd006c9c985351335afd5315 data/minecraft/advancements/recipes/combat/netherite_eagle_smithing.json
 32f07d2f3878fd7593c884a59c9ae71a458ab756 data/minecraft/advancements/recipes/combat/netherite_fork_smithing.json
@@ -32,6 +32,7 @@ f004d30b8b2ef913ed14c6e7759e225538d7b3d1 data/variants_mod/advancements/recipes/
 3f3855c498ba7bc4214cab0ba269f8f052c660d6 data/variants_mod/advancements/recipes/combat/wooden_stake.json
 5740ea3cbdc8b41e9c7660a037366cc578cd1737 data/variants_mod/advancements/recipes/misc/blowpipe.json
 12820333d9154dbd77344b4d001a059845d2df76 data/variants_mod/advancements/recipes/misc/bullet.json
+6be351ef54679395c73e0a3a814a40ef34a9e8ef data/variants_mod/advancements/recipes/misc/pondering_orb.json
 638190211d2973e0fd51a2899532d56e187ce70f data/variants_mod/advancements/recipes/misc/topaz.json
 5db121df4dfbe93c44f06cff86d26639e7b4b319 data/variants_mod/advancements/recipes/misc/topaz_block.json
 317b9eb3df90bec0cf233c0106d84f1bcc478b0c data/variants_mod/advancements/recipes/misc/topaz_from_blasting_topaz_ore.json
@@ -49,6 +50,7 @@ d772953e995d14ef3f64db0995fefe8176bde013 data/variants_mod/recipes/diamond_rifle
 3d93eec237f5f130910365e1db5467d25b0a0370 data/variants_mod/recipes/gold_dagger.json
 f00abeb52754677a8c13cc6e375eef29d3eaa7fa data/variants_mod/recipes/handgun.json
 84f26f67e1117e10a1b768a71d8876a61078ef79 data/variants_mod/recipes/iron_dagger.json
+74aefcdf9a9f659bcacf9bdf07f45a429a3f982a data/variants_mod/recipes/pondering_orb.json
 676b65a8c3511eac5094757da3c30da496c811fc data/variants_mod/recipes/prismarine_spellbook.json
 198b1574d00b64f9a07d1fad593c3e1f6a29ecda data/variants_mod/recipes/redstone_spellbook.json
 1ba72cd0e7733a2564ada212b5cc5b4235ab15d7 data/variants_mod/recipes/spore_staff.json

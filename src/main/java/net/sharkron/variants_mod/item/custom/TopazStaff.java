@@ -63,4 +63,9 @@ public class TopazStaff extends Item{
 
         return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
     }
+
+    @Override
+    public boolean canBeDepleted(){
+        return false;
+    }
 }

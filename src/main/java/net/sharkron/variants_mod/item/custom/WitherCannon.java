@@ -41,4 +41,14 @@ public class WitherCannon extends Item {
 
         return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
     }
+    
+    @Override
+    public int getEnchantmentValue(){
+        return 1;
+    }
+
+    @Override
+    public boolean canBeDepleted(){
+        return true;
+    }
 }
