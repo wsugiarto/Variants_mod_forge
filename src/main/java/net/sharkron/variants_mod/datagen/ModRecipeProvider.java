@@ -122,6 +122,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         gunCrafting(RecipeCategory.COMBAT, ModItems.AMETHYST_RIFLE.get(), Items.GOLD_BLOCK, Items.AMETHYST_SHARD, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_RIFLE.get(), Items.DIAMOND, Items.DIAMOND, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_SNIPER.get(), Items.DIAMOND_BLOCK, Items.DIAMOND, pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GRENADE_ITEM.get())
+        .pattern("   ")
+        .pattern(" DG")
+        .pattern("   ")
+        .define('D', Items.DIAMOND)
+        .define('G', Items.GUNPOWDER)
+        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+        .save(pWriter);
+
         netheriteSmithing(pWriter, ModItems.DIAMOND_RIFLE.get(), RecipeCategory.COMBAT, ModItems.NETHERITE_RIFLE.get());
         netheriteSmithing(pWriter, ModItems.TOPAZ_HANDGUN.get(), RecipeCategory.COMBAT, ModItems.NETHERITE_EAGLE.get());
         gunCrafting(RecipeCategory.COMBAT, ModItems.TNT_GUN.get(), Items.TNT, Items.NETHERITE_INGOT, pWriter);
