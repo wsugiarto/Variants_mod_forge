@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "   ",
+    "GDG",
+    "D  "
+  ],
+  "result": {
+    "item": "variants_mod:bounce_cannon"
+  },
+  "show_notification": true
+}

@@ -1,5 +1,10 @@
 package net.sharkron.variants_mod.item.custom;
 
+import java.util.List;
+
+import org.jetbrains.annotations.Nullable;
+
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -8,6 +13,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
@@ -21,8 +27,8 @@ public class VexxStaff extends Item{
 
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
-        int manaCost = 50;
-        int maxUseBeforeBroken = itemstack.getMaxDamage() - manaCost;
+        int manaCost = 24;
+        int maxUseBeforeBroken = itemstack.getMaxDamage() - 1;
 
         if (level.isClientSide || itemstack.getDamageValue() >= maxUseBeforeBroken) {
             return InteractionResultHolder.fail(itemstack);
@@ -51,5 +57,11 @@ public class VexxStaff extends Item{
     @Override
     public boolean canBeDepleted(){
         return false;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(Component.literal("Consumes 24 Mana"));
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }

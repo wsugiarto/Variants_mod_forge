@@ -1,7 +1,7 @@
 {
     "item.variants_mod.pondering_orb": "Heart of The Terrestrial",
     "item.variants_mod.tnt_gun": "TNT Gun",
-    "item.variants_mod.bullet": "Blowpipe",
+    "item.variants_mod.bullet": "Bullet",
     "item.variants_mod.blowpipe": "Blowpipe",
     "item.variants_mod.stone_launcher": "Stone Launcher",
     "item.variants_mod.handgun": "Handgun",
@@ -46,5 +46,6 @@
     
 
 
-    "creativetab.variants_mod_tab": "Variants"
+    "creativetab.variants_mod_tab": "Variants",
+    "creativetab.variants_mod_unfinished_tab": "Variants Extra"
   }

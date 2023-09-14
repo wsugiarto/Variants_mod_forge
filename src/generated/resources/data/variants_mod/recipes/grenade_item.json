@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "   ",
+    " DG",
+    "   "
+  ],
+  "result": {
+    "item": "variants_mod:grenade_item"
+  },
+  "show_notification": true
+}

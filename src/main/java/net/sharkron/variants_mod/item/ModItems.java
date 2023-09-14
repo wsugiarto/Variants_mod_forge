@@ -141,12 +141,13 @@ public class ModItems {
 
     //WILSON
     public static final RegistryObject<Item> WITHER_CANNON = ITEMS.register("wither_cannon",
-        () -> new WitherCannon(new Item.Properties().durability(64)));
+        () -> new WitherCannon(new Item.Properties().durability(2032)));
+
     public static final RegistryObject<Item> VEXX_STAFF = ITEMS.register("vexx_staff",
-        () -> new VexxStaff(new Item.Properties().durability(64)));
+        () -> new VexxStaff(new Item.Properties().durability(100)));
     
     public static final RegistryObject<Item> BOUNCE_CANNON = ITEMS.register("bounce_cannon",
-        () -> new BounceCannon(new Item.Properties().durability(64)));
+        () -> new BounceCannon(new Item.Properties().durability(1561)));
 
     public static final RegistryObject<Item> GRENADE_ITEM = ITEMS.register("grenade_item",
         () -> new GrenadeItem(new Item.Properties()));

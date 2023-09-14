@@ -63,6 +63,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         staffCrafting(RecipeCategory.COMBAT, ModItems.CHARCOAL_STAFF.get(), Items.CHARCOAL, ItemTags.PLANKS, ItemTags.LOGS, pWriter);
         staffCrafting(RecipeCategory.COMBAT, ModItems.COPPER_STAFF.get(), Items.COPPER_BLOCK, Items.STONE, ItemTags.STONE_TOOL_MATERIALS, pWriter);
         staffCrafting(RecipeCategory.COMBAT, ModItems.SPORE_STAFF.get(), Items.SPORE_BLOSSOM, Items.IRON_BLOCK, Items.MOSS_BLOCK, pWriter);
+        staffCrafting(RecipeCategory.COMBAT, ModItems.VEXX_STAFF.get(), Items.TUFF, Items.IRON_BLOCK, Items.COBBLED_DEEPSLATE, pWriter);
         staffCrafting(RecipeCategory.COMBAT, ModItems.TOPAZ_STAFF.get(), ModBlocks.TOPAZ_BLOCK.get(), Items.GOLD_INGOT, Items.GOLD_BLOCK, pWriter);
         staffCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_STAFF.get(), Items.DIAMOND_BLOCK, Items.ENDER_PEARL, Items.ENDER_PEARL, pWriter);
         netheriteSmithing(pWriter, Items.TRIDENT, RecipeCategory.COMBAT, ModItems.NETHERITE_FORK.get());
@@ -122,6 +123,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         gunCrafting(RecipeCategory.COMBAT, ModItems.AMETHYST_RIFLE.get(), Items.GOLD_BLOCK, Items.AMETHYST_SHARD, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_RIFLE.get(), Items.DIAMOND, Items.DIAMOND, pWriter);
         gunCrafting(RecipeCategory.COMBAT, ModItems.DIAMOND_SNIPER.get(), Items.DIAMOND_BLOCK, Items.DIAMOND, pWriter);
+        
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GRENADE_ITEM.get())
         .pattern("   ")
         .pattern(" DG")
@@ -131,8 +133,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
         .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BOUNCE_CANNON.get())
+        .pattern("   ")
+        .pattern("GDG")
+        .pattern("D  ")
+        .define('D', Items.DIAMOND)
+        .define('G', Items.GUNPOWDER)
+        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+        .save(pWriter);
+
         netheriteSmithing(pWriter, ModItems.DIAMOND_RIFLE.get(), RecipeCategory.COMBAT, ModItems.NETHERITE_RIFLE.get());
         netheriteSmithing(pWriter, ModItems.TOPAZ_HANDGUN.get(), RecipeCategory.COMBAT, ModItems.NETHERITE_EAGLE.get());
+        netheriteSmithing(pWriter, ModItems.BOUNCE_CANNON.get(), RecipeCategory.COMBAT, ModItems.WITHER_CANNON.get());
         gunCrafting(RecipeCategory.COMBAT, ModItems.TNT_GUN.get(), Items.TNT, Items.NETHERITE_INGOT, pWriter);
     }
     

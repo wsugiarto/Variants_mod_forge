@@ -15,7 +15,17 @@ public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create
         (Registries.CREATIVE_MODE_TAB, VariantsMod.MODID);
 
-    // Creates a creative tab with the id "new_mod:new_tab" for the example item, that is placed after the combat tab
+    public static final RegistryObject<CreativeModeTab> EXTRA_TAB = CREATIVE_MODE_TABS.register("variants_mod_unfinished_tab", () -> CreativeModeTab.builder()
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .icon(() -> ModItems.GAMBLE_ITEM.get().getDefaultInstance())
+            .title(Component.translatable("creativetab.variants_mod_unfinished_tab"))
+            .displayItems((parameters, output) -> {
+                output.accept(ModItems.GAMBLE_ITEM.get());
+                output.accept(ModItems.METAL_DETECTOR.get());
+                output.accept(ModBlocks.MORTAR_BLOCK.get());
+                output.accept(ModBlocks.SOUND_BLOCK.get());
+            }).build());
+
     public static final RegistryObject<CreativeModeTab> NEW_MOD_TAB = CREATIVE_MODE_TABS.register("variants_mod_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.PONDERING_ORB.get().getDefaultInstance())
@@ -29,9 +39,12 @@ public class ModCreativeTabs {
                 output.accept(ModItems.AMETHYST_RIFLE.get()); 
                 output.accept(ModItems.DIAMOND_RIFLE.get()); 
                 output.accept(ModItems.DIAMOND_SNIPER.get()); 
+                output.accept(ModItems.BOUNCE_CANNON.get());
+                output.accept(ModItems.GRENADE_ITEM.get());
                 output.accept(ModItems.NETHERITE_RIFLE.get()); 
                 output.accept(ModItems.NETHERITE_EAGLE.get()); 
                 output.accept(ModItems.TNT_GUN.get()); 
+                output.accept(ModItems.WITHER_CANNON.get());
                 output.accept(ModBlocks.TOPAZ_BLOCK.get());
                 output.accept(ModBlocks.TOPAZ_ORE.get());
                 output.accept(ModItems.WOODEN_STAKE.get());
@@ -43,27 +56,19 @@ public class ModCreativeTabs {
                 output.accept(ModItems.TOPAZ.get());
                 output.accept(ModItems.BOULETS.get());
                 output.accept(ModItems.CHARCOAL_STAFF.get());
-                output.accept(ModItems.TORCH_TOMB.get());
                 output.accept(ModItems.COPPER_STAFF.get());
                 output.accept(ModItems.REDSTONE_SPELLBOOK.get());
                 output.accept(ModItems.TOPAZ_STAFF.get());
                 output.accept(ModItems.TOPAZ_SPELLBOOK.get());
                 output.accept(ModItems.DIAMOND_STAFF.get());
                 output.accept(ModItems.NETHERITE_FORK.get());
-                output.accept(ModItems.PRISMARINE_SPELLBOOK.get());
+                output.accept(ModItems.TORCH_TOMB.get());
                 output.accept(ModItems.AMETHYST_SPELLBOOK.get());
                 output.accept(ModItems.TOPAZ_SPELLBOOK.get());
+                output.accept(ModItems.PRISMARINE_SPELLBOOK.get());
                 output.accept(ModItems.UNIVERSAL_SPELLBOOK.get());
                 output.accept(ModItems.SPORE_STAFF.get());
-                output.accept(ModItems.METAL_DETECTOR.get());
-                
-                output.accept(ModItems.WITHER_CANNON.get());
-                output.accept(ModBlocks.SOUND_BLOCK.get());
-                output.accept(ModBlocks.MORTAR_BLOCK.get());
                 output.accept(ModItems.VEXX_STAFF.get());
-                output.accept(ModItems.BOUNCE_CANNON.get());
-                output.accept(ModItems.GRENADE_ITEM.get());
-                output.accept(ModItems.GAMBLE_ITEM.get());
             }).build());
 
     public static void register(IEventBus eventBus){

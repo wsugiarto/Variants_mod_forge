@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:tuff"
+    },
+    "B": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "S": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "pattern": [
+    "#B ",
+    "BS ",
+    "  S"
+  ],
+  "result": {
+    "item": "variants_mod:vexx_staff"
+  },
+  "show_notification": true
+}
